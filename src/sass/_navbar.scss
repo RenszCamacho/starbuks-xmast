@@ -39,13 +39,14 @@
     transition: all 100ms ease-in-out;
 
     &:hover {
-      background-color: black;
+      background-color: $font-color;
       color: white;
     }
   }
 
   &__icon {
     color: $starbucks-color;
+    font-size: 1.9rem;
     padding: 0 0.7rem;
   }
 
