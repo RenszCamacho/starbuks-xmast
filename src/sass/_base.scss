@@ -1,2 +1,26 @@
 //vars
 $lato: "Lato", sans-serif;
+$starbucks-color: #006240;
+$font-color: #3d3936;
+
+//Responsive Variables.
+$breakpoints: (
+  small: 0px,
+  medium: 649px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
+//Responsive Function
+@mixin rwd($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media screen and (min-width: map-get($breakpoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $bp) {
+      @content;
+    }
+  }
+}
