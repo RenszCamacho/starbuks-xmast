@@ -1,8 +1,53 @@
 .hero {
   display: flex;
   justify-content: center;
+  width: auto;
+
+  @include rwd(medium) {
+    width: 100%;
+  }
+
+  &__link {
+    width: inherit;
+
+    &--mobile {
+      width: inherit;
+    }
+  }
 
   &__img {
     display: block;
+
+    &--mobile {
+      width: inherit;
+      display: block;
+    }
+  }
+
+  &__drinks {
+    display: block;
+
+    &--mobile {
+      width: inherit;
+      display: block;
+    }
+  }
+
+  &__food {
+    display: block;
+
+    &--mobile {
+      width: inherit;
+      display: block;
+    }
+  }
+
+  &__queries {
+    display: block;
+
+    &--mobile {
+      width: inherit;
+      display: block;
+    }
   }
 }
