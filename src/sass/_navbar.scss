@@ -1,7 +1,6 @@
 .header {
   width: 100%;
   height: 10rem;
-  // background-color: red;
   border-top: 0.9rem solid $starbucks-color;
 }
 
@@ -25,6 +24,10 @@
   &__list {
     display: flex;
     align-items: flex-end;
+
+    @include rwd(medium) {
+      display: none;
+    }
   }
 
   &__item {

@@ -17,6 +17,7 @@
     @include rwd(medium) {
       grid-template-columns: 1fr;
       grid-template-areas: "images" "description";
+      padding: 0;
     }
   }
 
