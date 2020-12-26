@@ -10,11 +10,13 @@
     max-width: 1360px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "description images";
     grid-gap: 2rem;
     padding: 2rem 8rem;
 
     @include rwd(medium) {
       grid-template-columns: 1fr;
+      grid-template-areas: "images" "description";
     }
   }
 
@@ -22,11 +24,22 @@
     display: flex;
     align-content: center;
     flex-wrap: wrap;
+    grid-area: description;
+
+    @include rwd(medium) {
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
   }
 
   &__subtitle {
     text-transform: uppercase;
     padding-bottom: 3rem;
+
+    @include rwd(medium) {
+      font-size: calc(1.3rem + 1vw);
+    }
   }
 
   &__paragraph {
@@ -34,9 +47,13 @@
       family: $promotion-font;
       style: italic;
       weight: 400;
-      size: 1.7rem;
+      size: calc(1.3rem + 0.5vw);
     }
     padding-bottom: 3rem;
+
+    @include rwd(medium) {
+      font-size: calc(1.3rem + 0.5vw);
+    }
   }
 
   &__link {
@@ -48,6 +65,10 @@
       weight: 700;
       style: normal;
     }
+
+    @include rwd(medium) {
+      font-size: calc(1.3rem + 0.5vw);
+    }
   }
 
   &__icon {
@@ -55,6 +76,8 @@
   }
 
   &__images {
+    width: fit-content;
     max-width: 100%;
+    grid-area: images;
   }
 }
