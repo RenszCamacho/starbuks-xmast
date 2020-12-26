@@ -18,6 +18,10 @@
   &__img {
     display: block;
 
+    @include rwd(large) {
+      width: 170rem;
+    }
+
     &--mobile {
       width: inherit;
       display: block;
@@ -26,6 +30,10 @@
 
   &__drinks {
     display: block;
+
+    @include rwd(large) {
+      width: 170rem;
+    }
 
     &--mobile {
       width: inherit;
@@ -36,6 +44,10 @@
   &__food {
     display: block;
 
+    @include rwd(large) {
+      width: 170rem;
+    }
+
     &--mobile {
       width: inherit;
       display: block;
@@ -44,6 +56,10 @@
 
   &__queries {
     display: block;
+
+    @include rwd(large) {
+      width: 170rem;
+    }
 
     &--mobile {
       width: inherit;
