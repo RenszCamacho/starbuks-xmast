@@ -1,0 +1,32 @@
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1360px;
+    padding: 2rem 8rem;
+    display: flex;
+    align-items: center;
+
+    @include rwd(medium) {
+      padding: 2.7rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-right: 2rem;
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: $font-color;
+    transition: all 200ms ease-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
