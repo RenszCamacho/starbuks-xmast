@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  height: 10rem;
+  // height: 10rem;
   border-top: 0.9rem solid $starbucks-color;
 }
 
@@ -19,6 +19,11 @@
     width: 5rem;
     height: 5rem;
     opacity: 0;
+    display: none;
+
+    @include rwd(medium) {
+      display: block;
+    }
   }
 
   &__hamburger {
@@ -32,14 +37,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-color: black;
 
     & > div {
+      display: none;
       position: relative;
       width: 100%;
       height: 0.4rem;
       background-color: $starbucks-color;
       transition: all 400ms ease;
+
+      @include rwd(medium) {
+        display: block;
+      }
 
       &::before,
       &::after {
@@ -74,6 +83,7 @@
 
   &__navbar {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     padding: 2rem 0;
   }
@@ -82,11 +92,19 @@
     display: block;
     padding: 0 3.1rem;
     height: fit-content;
+
+    @include rwd(915px) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__list {
     display: flex;
     align-items: flex-end;
+
+    @include rwd(915px) {
+      padding-left: 2rem;
+    }
 
     @include rwd(medium) {
       display: none;
@@ -101,7 +119,7 @@
   &__link {
     font-size: 1.4rem;
     color: $font-color;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     transition: all 100ms ease-in-out;
 
     &:hover {
@@ -117,6 +135,7 @@
   }
 
   &__mapMarker {
+    width: 21rem;
     height: 10rem;
     padding-top: 2rem;
     cursor: pointer;
