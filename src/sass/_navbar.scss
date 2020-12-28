@@ -12,7 +12,7 @@
 
   &__toggler {
     position: absolute;
-    bottom: 1.6rem;
+    bottom: -0.04rem;
     right: 0.25rem;
     z-index: 2;
     cursor: pointer;
@@ -28,7 +28,7 @@
 
   &__hamburger {
     position: absolute;
-    bottom: 0.9rem;
+    bottom: 0rem;
     right: 0;
     z-index: 1;
     width: 5.5rem;
@@ -135,8 +135,10 @@
   }
 
   &__mapMarker {
+    position: relative;
     width: 21rem;
     height: 10rem;
+    display: flex;
     padding-top: 2rem;
     cursor: pointer;
     transition: all 200ms ease-out;
@@ -149,5 +151,9 @@
   &__mapDescription {
     font-size: 1.4rem;
     opacity: 0.7;
+
+    @include rwd(medium) {
+      display: none;
+    }
   }
 }
