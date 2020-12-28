@@ -9,6 +9,8 @@
 
   &__link {
     width: inherit;
+    display: flex;
+    justify-content: center;
 
     &--mobile {
       width: inherit;
@@ -23,7 +25,7 @@
     }
 
     @include rwd(medium) {
-      width: 70rem;
+      width: 115rem;
     }
 
     &--mobile {
@@ -39,6 +41,10 @@
       width: 170rem;
     }
 
+    @include rwd(medium) {
+      width: 115rem;
+    }
+
     &--mobile {
       width: inherit;
       display: block;
@@ -52,6 +58,10 @@
       width: 170rem;
     }
 
+    @include rwd(medium) {
+      width: 115rem;
+    }
+
     &--mobile {
       width: inherit;
       display: block;
@@ -63,6 +73,10 @@
 
     @include rwd(large) {
       width: 170rem;
+    }
+
+    @include rwd(medium) {
+      width: 115rem;
     }
 
     &--mobile {
