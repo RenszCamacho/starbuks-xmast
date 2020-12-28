@@ -1,0 +1,95 @@
+.footer {
+  width: 100%;
+  border-top: 3px solid white;
+  background: {
+    color: #f7f7f7;
+    image: url(../images/footer-img.png);
+    repeat: no-repeat;
+    position: 83% 50%;
+    size: 1.6rem;
+  }
+
+  &__wrapper {
+    max-width: 100%;
+    max-width: 1360px;
+    display: grid;
+    padding: 5rem 20rem 10rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "list1 list2 list3"
+      "links links links"
+      "copyright copyright copyright";
+    grid-gap: 2rem 0;
+  }
+
+  &__wrapList1 {
+    grid-area: list1;
+  }
+
+  &__wrapList2 {
+    grid-area: list2;
+  }
+  &__wrapList3 {
+    grid-area: list3;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    padding: 1.8rem 0;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    color: $font-color;
+    font: {
+      size: 1.68rem;
+      weight: 700;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    color: $font-color;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__wrapLink {
+    grid-area: links;
+  }
+
+  &__link {
+    color: $font-color;
+    padding: 0 2rem;
+    border-right: 1px solid $font-color;
+    transition: all 150ms ease-in-out;
+
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+
+    &:nth-last-child(1) {
+      border: none;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__copy {
+    grid-area: copyright;
+  }
+
+  &__copyDescription {
+    color: $font-color;
+  }
+}

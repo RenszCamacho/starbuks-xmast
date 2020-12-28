@@ -22,6 +22,10 @@
       width: 170rem;
     }
 
+    @include rwd(medium) {
+      width: 70rem;
+    }
+
     &--mobile {
       width: inherit;
       display: block;
