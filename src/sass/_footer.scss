@@ -9,6 +9,18 @@
     size: 1.6rem;
   }
 
+  @include rwd(xlarge) {
+    background-position: 90% 50%;
+  }
+
+  @include rwd(large) {
+    background-position: 94% 50%;
+  }
+
+  @include rwd(medium) {
+    background-image: none;
+  }
+
   &__wrapper {
     max-width: 100%;
     max-width: 1360px;
@@ -20,6 +32,20 @@
       "links links links"
       "copyright copyright copyright";
     grid-gap: 2rem 0;
+
+    @include rwd(large) {
+      padding: 3rem 6rem 7rem;
+    }
+
+    @include rwd(medium) {
+      width: 100%;
+      grid-template-areas:
+        "list1 list1 list1"
+        "list2 list2 list2"
+        "list3 list3 list3"
+        "links links links"
+        "copyright copyright copyright";
+    }
   }
 
   &__wrapList1 {
@@ -51,7 +77,7 @@
 
   &__item {
     list-style: none;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
     cursor: pointer;
     color: $font-color;
@@ -60,14 +86,23 @@
     &:hover {
       opacity: 0.5;
     }
+
+    @include rwd(medium) {
+      display: none;
+    }
   }
 
   &__wrapLink {
     grid-area: links;
+
+    @include rwd(medium) {
+      display: none;
+    }
   }
 
   &__link {
     color: $font-color;
+    font-size: 1.3rem;
     padding: 0 2rem;
     border-right: 1px solid $font-color;
     transition: all 150ms ease-in-out;

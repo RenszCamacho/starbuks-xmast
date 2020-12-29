@@ -8,84 +8,18 @@
   height: inherit;
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
   position: relative;
-
-  &__toggler {
-    position: absolute;
-    bottom: -0.04rem;
-    right: 0.25rem;
-    z-index: 2;
-    cursor: pointer;
-    width: 5rem;
-    height: 5rem;
-    opacity: 0;
-    display: none;
-
-    @include rwd(medium) {
-      display: block;
-    }
-  }
-
-  &__hamburger {
-    position: absolute;
-    bottom: 0rem;
-    right: 0;
-    z-index: 1;
-    width: 5.5rem;
-    height: 4rem;
-    padding: 1.6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & > div {
-      display: none;
-      position: relative;
-      width: 100%;
-      height: 0.4rem;
-      background-color: $starbucks-color;
-      transition: all 400ms ease;
-
-      @include rwd(medium) {
-        display: block;
-      }
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        z-index: 1;
-        top: -1rem;
-        width: 100%;
-        height: 0.4rem;
-        background-color: inherit;
-      }
-
-      &::after {
-        top: 1rem;
-      }
-    }
-  }
-  &__toggler:checked + &__hamburger {
-    background-color: black;
-  }
-
-  &__toggler:checked + &__hamburger > div {
-    transform: rotate(135deg);
-    background-color: white;
-
-    &::before,
-    &::after {
-      top: 0;
-      transform: rotate(90deg);
-    }
-  }
 
   &__navbar {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     padding: 2rem 0;
+
+    @include rwd(medium) {
+      padding: 1rem 0;
+    }
   }
 
   &__logoImg {
@@ -95,6 +29,10 @@
 
     @include rwd(915px) {
       margin-bottom: 3rem;
+    }
+
+    @include rwd(medium) {
+      margin-bottom: 0;
     }
   }
 
@@ -128,23 +66,35 @@
     }
   }
 
-  &__icon {
-    color: $starbucks-color;
-    font-size: 1.9rem;
-    padding: 0 0.7rem;
-  }
-
   &__mapMarker {
     position: relative;
     width: 21rem;
     height: 10rem;
     display: flex;
+    justify-content: center;
     padding-top: 2rem;
     cursor: pointer;
     transition: all 200ms ease-out;
 
+    @include rwd(medium) {
+      align-items: flex-end;
+      height: auto;
+    }
+
     &:hover {
       opacity: 0.8;
+    }
+  }
+
+  &__icon {
+    color: $starbucks-color;
+    font-size: 1.9rem;
+    padding: 0 0.7rem;
+
+    @include rwd(medium) {
+      font-size: 2.3rem;
+      padding: 1.2rem 0.7rem;
+      margin-left: 4.4rem;
     }
   }
 
